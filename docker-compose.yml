@@ -1,0 +1,21 @@
+version: '1'
+services:
+  nginx1:
+    image: nginx
+    restart: always
+
+  nginx2:
+    image: nginx
+    restart: always
+
+  php1:
+    build: php1/Dockerfile
+
+  php2:
+    build: php2/Dockerfile
+
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: mydatabase
+      MYSQL_ROOT_PASSWORD: myrootpassword
